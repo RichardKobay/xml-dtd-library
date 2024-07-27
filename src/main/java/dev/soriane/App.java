@@ -1,5 +1,7 @@
 package dev.soriane;
 
+import dev.soriane.dtdxmlparser.exceptions.NeedChildElementException;
+import dev.soriane.dtdxmlparser.generator.XMLGenerator;
 import dev.soriane.dtdxmlparser.model.dtd.DTDStructure;
 import dev.soriane.dtdxmlparser.model.xml.XMLStructure;
 import dev.soriane.dtdxmlparser.parser.DTDParser;
@@ -31,6 +33,15 @@ public class App {
 
         DTDValidator validator = new DTDValidator();
         System.out.println(validator.validate(xmlStructure, dtdStructure));
+
+        // Generate an empty xml
+        XMLGenerator xmlGenerator = new XMLGenerator();
+        try {
+            String emptyXML = xmlGenerator.generateEmptyXML(dtdStructure, "database-name");
+            FileManager.rewriteFile("C:\\Users\\ricar\\dev\\poo\\dtd-xml-parser\\src\\main\\resources\\emptyxml.xml", emptyXML);
+        } catch (NeedChildElementException e) {
+            throw new RuntimeException(e);
+        }
 
         System.out.println("ivan");
         System.out.println("ivan");
