@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<database name="db-name">
+    <table name="table-name">
+        <columns>
+            <column type="data-type">one_column</column>
+        </columns>
+        <constraints>
+            <constraint>
+                <type>constraint-type</type>
+                <name>constraint-name</name>
+            </constraint>
+            <constraint>
+                <type>two</type>
+                <name>constraints</name>
+            </constraint>
+        </constraints>
+    </table>
+    <table name="table-name">
+        <columns>
+            <column type="data-type">column_name</column>
+            <column type="data-type">column_name</column>
+            <column type="data-type">column_name</column>
+            <column type="data-type">column_name</column>
+            <column type="data-type">column_name</column>
+            <column type="data-type">column_name</column>
+            <column type="data-type">column_name</column>
+            <column type="a-data-type">another_column_name</column>
+        </columns>
+        <constraints>
+            <constraint>
+                <type>constraint-type</type>
+                <name>constraint-name</name>
+            </constraint>
+            <constraint>
+                <type>constraint-type</type>
+                <name>constraint-name</name>
+            </constraint>
+            <constraint>
+                <type>constraint-type</type>
+                <name>constraint-name</name>
+            </constraint>
+        </constraints>
+    </table>
+</database>
