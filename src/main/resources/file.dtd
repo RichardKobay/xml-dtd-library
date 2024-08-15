@@ -6,6 +6,7 @@
         <!ELEMENT column (#PCDATA)>
         <!ATTLIST column type CDATA #REQUIRED>
         <!ELEMENT constraints (constraint*)>
-        <!ELEMENT constraint (type, name)>
+        <!ELEMENT constraint (type, columnname, name)>
+        <!ELEMENT columnname (#PCDATA)>
         <!ELEMENT type (#PCDATA)>
         <!ELEMENT name (#PCDATA)>

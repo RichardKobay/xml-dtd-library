@@ -22,9 +22,10 @@ public class Attribute {
         this.type = type;
     }
 
-    public Attribute (String name, String type) {
+    public Attribute (String name, String type, String value) {
         this.name = name;
         this.type = type;
+        this.value = value;
     }
 
     /* *

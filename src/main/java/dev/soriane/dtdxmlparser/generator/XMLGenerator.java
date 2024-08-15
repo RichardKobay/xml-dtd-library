@@ -4,6 +4,9 @@ import dev.soriane.dtdxmlparser.model.dtd.DTDStructure;
 import dev.soriane.dtdxmlparser.model.dtd.DTDElement;
 import dev.soriane.dtdxmlparser.model.dtd.DTDAttribute;
 import dev.soriane.dtdxmlparser.exceptions.NeedChildElementException;
+import dev.soriane.dtdxmlparser.model.xml.Attribute;
+import dev.soriane.dtdxmlparser.model.xml.Element;
+import dev.soriane.dtdxmlparser.model.xml.XMLStructure;
 
 import java.util.Map;
 
@@ -38,5 +41,51 @@ public class XMLGenerator {
         xmlBuilder.append(">").append("\n</").append(rootElement.getName()).append(">");
 
         return xmlBuilder.toString();
+    }
+
+    public static String xmlStructureString(XMLStructure xmlStructure) {
+        StringBuilder xmlString = new StringBuilder();
+        xmlString.append("<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n");
+        buildXmlString(xmlStructure.getRootElement(), xmlString, 0);
+        return xmlString.toString();
+    }
+
+    private static void buildXmlString(Element element, StringBuilder xmlString, int indent) {
+        appendIndent(xmlString, indent);
+        xmlString.append("<").append(element.getName());
+
+        // Add attributes
+        for (Attribute attribute : element.getAttributes()) {
+            xmlString.append(" ").append(attribute.getName()).append("=\"").append(attribute.getValue()).append("\"");
+        }
+
+        if (element.getChildren().isEmpty() && element.getContent() == null) {
+            xmlString.append(">\n");
+            appendIndent(xmlString, indent);
+            xmlString.append("</").append(element.getName()).append(">\n");
+        } else {
+            xmlString.append(">");
+
+            if (element.getContent() != null) {
+                xmlString.append(element.getContent());
+            } else {
+                xmlString.append("\n");
+            }
+
+            for (Element child : element.getChildren()) {
+                buildXmlString(child, xmlString, indent + 1);
+            }
+
+            if (element.getContent() == null) {
+                appendIndent(xmlString, indent);
+            }
+            xmlString.append("</").append(element.getName()).append(">\n");
+        }
+    }
+
+    private static void appendIndent(StringBuilder xmlString, int indent) {
+        for (int i = 0; i < indent; i++) {
+            xmlString.append("    ");
+        }
     }
 }

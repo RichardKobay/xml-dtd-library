@@ -2,32 +2,15 @@
 <database name="db-name">
     <table name="table-name">
         <columns>
-            <column type="data-type">column_name</column>
-            <column type="data-type">column_name</column>
-            <column type="data-type">column_name</column>
+            <column type="data-type">column_name_01</column>
+            <column type="data-type">column_name_02</column>
+            <column type="data-type">column_name_03</column>
         </columns>
         <constraints>
             <constraint>
                 <type>constraint-type</type>
+                <columnname>column-name</columnname>
                 <name>constraint-name</name>
-            </constraint>
-        </constraints>
-    </table>
-    <table name="other-table-name">
-        <columns>
-            <column type="data-type">column_name_1</column>
-            <column type="data-type">column_name_2</column>
-            <column type="data-type">column_name_3</column>
-            <column type="data-type">column_name_4</column>
-        </columns>
-        <constraints>
-            <constraint>
-                <type>constraint-type</type>
-                <name>constraint-name-1</name>
-            </constraint>
-            <constraint>
-                <type>constraint-type</type>
-                <name>constraint-name-2</name>
             </constraint>
         </constraints>
     </table>

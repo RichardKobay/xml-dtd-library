@@ -28,6 +28,13 @@ public class Element {
         this.attributes = new ArrayList<>();
     }
 
+    public Element (String name, String content) {
+        this.name = name;
+        this.content = content;
+        this.children = new ArrayList<Element>();
+        this.attributes = new ArrayList<>();
+    }
+
     /* *
     * * * * * * * * * * * * * * * * * * * * * * * * *
     *              GETTERS AND SETTERS              *
@@ -64,5 +71,13 @@ public class Element {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public void addAttribute (Attribute attribute) {
+        this.attributes.add(attribute);
+    }
+
+    public void addChild (Element child) {
+        this.children.add(child);
     }
 }
