@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<database name="database">
+    <table name="table_name_02">
+        <columns>
+            <column type="number">column_name_01_02</column>
+            <column type="varchar">column_name_02_02</column>
+            <column type="boolean">column_name_03_02</column>
+            <column type="varchar">column_name_04_02</column>
+        </columns>
+        <constraints>
+            <constraint>
+                <type>constraint_type_01_02</type>
+                <columnname>column_name_01_02</columnname>
+                <name>constraint_name_01_02</name>
+                <tablereference>table_reference_01_02</tablereference>
+                <columnreference>column_reference_01_02</columnreference>
+            </constraint>
+            <constraint>
+                <type>constraint_type_02_02</type>
+                <columnname>column_name_02_02</columnname>
+                <name>constraint_name_02_02</name>
+                <tablereference>table_reference_02_02</tablereference>
+                <columnreference>column_reference_02_02</columnreference>
+            </constraint>
+        </constraints>
+    </table>
+    <table name="table_name_03">
+        <columns>
+            <column type="number">column_name_01_02</column>
+            <column type="varchar">column_name_02_02</column>
+            <column type="boolean">column_name_03_02</column>
+            <column type="varchar">column_name_04_02</column>
+        </columns>
+        <constraints>
+            <constraint>
+                <type>constraint_type_01_02</type>
+                <columnname>column_name_01_02</columnname>
+                <name>constraint_name_01_02</name>
+                <tablereference>table_reference_01_02</tablereference>
+                <columnreference>column_reference_01_02</columnreference>
+            </constraint>
+            <constraint>
+                <type>constraint_type_02_02</type>
+                <columnname>column_name_02_02</columnname>
+                <name>constraint_name_02_02</name>
+                <tablereference>table_reference_02_02</tablereference>
+                <columnreference>column_reference_02_02</columnreference>
+            </constraint>
+        </constraints>
+    </table>
+    <table name="table_name_05">
+        <columns>
+            <column type="number">column_name_01_03</column>
+            <column type="varchar">column_name_02_03</column>
+            <column type="boolean">column_name_03_03</column>
+            <column type="varchar">column_name_04_03</column>
+            <column type="varchar">column_name_05_03</column>
+        </columns>
+        <constraints>
+            <constraint>
+                <type>constraint_type_01_03</type>
+                <columnname>column_name_01_03</columnname>
+                <name>constraint_name_01_03</name>
+                <tablereference>table_reference_01_03</tablereference>
+                <columnreference>column_reference_01_03</columnreference>
+            </constraint>
+            <constraint>
+                <type>constraint_type_02_03</type>
+                <columnname>column_name_02_03</columnname>
+                <name>constraint_name_02_03</name>
+                <tablereference>table_reference_02_03</tablereference>
+                <columnreference>column_reference_02_03</columnreference>
+            </constraint>
+            <constraint>
+                <type>constraint_type_03_03</type>
+                <columnname>column_name_03_03</columnname>
+                <name>constraint_name_03_03</name>
+                <tablereference>table_reference_03_03</tablereference>
+                <columnreference>column_reference_03_03</columnreference>
+            </constraint>
+        </constraints>
+    </table>
+    <table name="table_name_06">
+        <columns>
+            <column type="number">column_name_01_04</column>
+            <column type="varchar">column_name_02_04</column>
+        </columns>
+        <constraints>
+            <constraint>
+                <type>constraint_type_01_04</type>
+                <columnname>column_name_01_04</columnname>
+                <name>constraint_name_01_04</name>
+                <tablereference></tablereference>
+                <columnreference></columnreference>
+            </constraint>
+            <constraint>
+                <type>constraint_type_02_04</type>
+                <columnname>column_name_02_04</columnname>
+                <name>constraint_name_02_04</name>
+                <tablereference></tablereference>
+                <columnreference></columnreference>
+            </constraint>
+        </constraints>
+    </table>
+    <table name="table_name_07">
+        <columns>
+            <column type="number">column_name_01_04</column>
+            <column type="varchar">column_name_02_04</column>
+        </columns>
+        <constraints>
+            <constraint>
+                <type>constraint_type_01_04</type>
+                <columnname>column_name_01_04</columnname>
+                <name>constraint_name_01_04</name>
+                <tablereference></tablereference>
+                <columnreference></columnreference>
+            </constraint>
+            <constraint>
+                <type>constraint_type_02_04</type>
+                <columnname>column_name_02_04</columnname>
+                <name>constraint_name_02_04</name>
+                <tablereference></tablereference>
+                <columnreference></columnreference>
+            </constraint>
+        </constraints>
+    </table>
+</database>

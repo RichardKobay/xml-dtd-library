@@ -1,0 +1,287 @@
+{
+  "name": "database",
+  "content": null,
+  "attributes": [
+    {
+      "name": "name",
+      "type": "CDATA",
+      "value": "db-name"
+    }
+  ],
+  "children": [
+    {
+      "name": "table",
+      "content": null,
+      "attributes": [
+        {
+          "name": "name",
+          "type": "CDATA",
+          "value": "table-name-02"
+        }
+      ],
+      "children": [
+        {
+          "name": "columns",
+          "content": null,
+          "attributes": [],
+          "children": [
+            {
+              "name": "column",
+              "content": "column_01_01",
+              "attributes": [
+                {
+                  "name": "type",
+                  "type": "CDATA",
+                  "value": "number"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "column",
+              "content": "column_01_02",
+              "attributes": [
+                {
+                  "name": "type",
+                  "type": "CDATA",
+                  "value": "varchar"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "column",
+              "content": "column_01_03",
+              "attributes": [
+                {
+                  "name": "type",
+                  "type": "CDATA",
+                  "value": "data-type"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "constraints",
+          "content": null,
+          "attributes": [],
+          "children": [
+            {
+              "name": "constraint",
+              "content": null,
+              "attributes": [],
+              "children": [
+                {
+                  "name": "type",
+                  "content": "type_01_01",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "columnname",
+                  "content": "name_01_01",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "name",
+                  "content": "name_01_01",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "tablereference",
+                  "content": "table_reference_01_01",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "columnreference",
+                  "content": "column_reference_01_01",
+                  "attributes": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "constraint",
+              "content": null,
+              "attributes": [],
+              "children": [
+                {
+                  "name": "type",
+                  "content": "type_01_02",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "columnname",
+                  "content": "name_01_02",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "name",
+                  "content": "name_01_02",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "tablereference",
+                  "content": "table_reference_01_02",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "columnreference",
+                  "content": "column_reference_01_02",
+                  "attributes": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "table",
+      "content": null,
+      "attributes": [
+        {
+          "name": "name",
+          "type": "CDATA",
+          "value": "table-name-02"
+        }
+      ],
+      "children": [
+        {
+          "name": "columns",
+          "content": null,
+          "attributes": [],
+          "children": [
+            {
+              "name": "column",
+              "content": "column_02_01",
+              "attributes": [
+                {
+                  "name": "type",
+                  "type": "CDATA",
+                  "value": "number"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "column",
+              "content": "column_02_02",
+              "attributes": [
+                {
+                  "name": "type",
+                  "type": "CDATA",
+                  "value": "varchar"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "column",
+              "content": "column_02_03",
+              "attributes": [
+                {
+                  "name": "type",
+                  "type": "CDATA",
+                  "value": "data-type"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "constraints",
+          "content": null,
+          "attributes": [],
+          "children": [
+            {
+              "name": "constraint",
+              "content": null,
+              "attributes": [],
+              "children": [
+                {
+                  "name": "type",
+                  "content": "type_02_01",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "columnname",
+                  "content": "name_02_01",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "name",
+                  "content": "name_02_01",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "tablereference",
+                  "content": "table_reference_02_01",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "columnreference",
+                  "content": "column_reference_02_01",
+                  "attributes": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "constraint",
+              "content": null,
+              "attributes": [],
+              "children": [
+                {
+                  "name": "type",
+                  "content": "type_02_02",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "columnname",
+                  "content": "name_02_02",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "name",
+                  "content": "name_02_02",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "tablereference",
+                  "content": "table_reference_02_02",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "columnreference",
+                  "content": "column_reference_02_02",
+                  "attributes": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<database name="db-name">
+    <table name="table-name">
+        <columns>
+            <column type="data-type">column_name</column>
+            <column type="data-type">column_name</column>
+            <column type="data-type">column_name</column>
+        </columns>
+        <constraints>
+            <constraint>
+                <type>constraint-type</type>
+                <columnname>column-name</columnname>
+                <name>constraint-name</name>
+            </constraint>
+        </constraints>
+    </table>
+</database>

@@ -1,0 +1,334 @@
+Ok, i see some errors in the code, so... Let's start again but just one by one method.
+
+First we need to add tables to the xml structure.
+
+For this method we will need the name of the table, all the columns in a List of hashmaps, and a list of constraints. The method should look like this:
+
+```
+public void addTable(XMLStructure xmlStructure, List<HashMap<String,String>> columns, List<Constraint> constraints) {}
+```
+
+Remember that the Constraint class looks like this:
+```
+package dev.soriane.dtdxmlparser.model.xml;
+
+public class Constraint {
+    private String columnName;
+    private String constraintType;
+    private String constraintName;
+
+    public Constraint(String columnName, String constraintType, String constraintName) {
+        this.columnName = columnName;
+        this.constraintType = constraintType;
+        this.constraintName = constraintName;
+    }
+
+    public String getColumnName() {
+        return columnName;
+    }
+
+    public void setColumnName(String columnName) {
+        this.columnName = columnName;
+    }
+
+    public String getConstraintType() {
+        return constraintType;
+    }
+
+    public void setConstraintType(String constraintType) {
+        this.constraintType = constraintType;
+    }
+
+    public String getConstraintName() {
+        return constraintName;
+    }
+
+    public void setConstraintName(String constraintName) {
+        this.constraintName = constraintName;
+    }
+}
+```
+
+For exaple, if we have an xmlStructure that looks like this:
+
+```
+{
+  "name": "database",
+  "content": null,
+  "attributes": [
+    {
+      "name": "name",
+      "type": "CDATA",
+      "value": "table-name"
+    }
+  ],
+  "children": [
+    {
+      "name": "table",
+      "content": null,
+      "attributes": [
+        {
+          "name": "name",
+          "type": "CDATA",
+          "value": "table-name"
+        }
+      ],
+      "children": [
+        {
+          "name": "columns",
+          "content": null,
+          "attributes": [],
+          "children": [
+            {
+              "name": "column",
+              "content": "column_name",
+              "attributes": [
+                {
+                  "name": "type",
+                  "type": "CDATA",
+                  "value": "data-type"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "column",
+              "content": "column_name",
+              "attributes": [
+                {
+                  "name": "type",
+                  "type": "CDATA",
+                  "value": "data-type"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "column",
+              "content": "column_name",
+              "attributes": [
+                {
+                  "name": "type",
+                  "type": "CDATA",
+                  "value": "data-type"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "constraints",
+          "content": null,
+          "attributes": [],
+          "children": [
+            {
+              "name": "constraint",
+              "content": null,
+              "attributes": [],
+              "children": [
+                {
+                  "name": "type",
+                  "content": "constraint-type",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "name",
+                  "content": "constraint-name",
+                  "attributes": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+And we want to add another table, the new xmlStructure should look like this:
+
+```
+{
+  "name": "database",
+  "content": null,
+  "attributes": [
+    {
+      "name": "name",
+      "type": "CDATA",
+      "value": "table-name"
+    }
+  ],
+  "children": [
+    {
+      "name": "table",
+      "content": null,
+      "attributes": [
+        {
+          "name": "name",
+          "type": "CDATA",
+          "value": "table-name"
+        }
+      ],
+      "children": [
+        {
+          "name": "columns",
+          "content": null,
+          "attributes": [],
+          "children": [
+            {
+              "name": "column",
+              "content": "column_name",
+              "attributes": [
+                {
+                  "name": "type",
+                  "type": "CDATA",
+                  "value": "data-type"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "column",
+              "content": "column_name",
+              "attributes": [
+                {
+                  "name": "type",
+                  "type": "CDATA",
+                  "value": "data-type"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "column",
+              "content": "column_name",
+              "attributes": [
+                {
+                  "name": "type",
+                  "type": "CDATA",
+                  "value": "data-type"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "constraints",
+          "content": null,
+          "attributes": [],
+          "children": [
+            {
+              "name": "constraint",
+              "content": null,
+              "attributes": [],
+              "children": [
+                {
+                  "name": "type",
+                  "content": "constraint-type",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "name",
+                  "content": "constraint-name",
+                  "attributes": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "table",
+      "content": null,
+      "attributes": [
+        {
+          "name": "name",
+          "type": "CDATA",
+          "value": "table-name"
+        }
+      ],
+      "children": [
+        {
+          "name": "columns",
+          "content": null,
+          "attributes": [],
+          "children": [
+            {
+              "name": "column",
+              "content": "column_name",
+              "attributes": [
+                {
+                  "name": "type",
+                  "type": "CDATA",
+                  "value": "data-type"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "column",
+              "content": "column_name",
+              "attributes": [
+                {
+                  "name": "type",
+                  "type": "CDATA",
+                  "value": "data-type"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "column",
+              "content": "column_name",
+              "attributes": [
+                {
+                  "name": "type",
+                  "type": "CDATA",
+                  "value": "data-type"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "constraints",
+          "content": null,
+          "attributes": [],
+          "children": [
+            {
+              "name": "constraint",
+              "content": null,
+              "attributes": [],
+              "children": [
+                {
+                  "name": "type",
+                  "content": "constraint-type",
+                  "attributes": [],
+                  "children": []
+                },
+                {
+                  "name": "name",
+                  "content": "constraint-name",
+                  "attributes": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+```
+

@@ -1,0 +1,12 @@
+<!ELEMENT database (table*)>
+        <!ATTLIST database name CDATA #REQUIRED>
+        <!ELEMENT table (columns, constraints)>
+        <!ATTLIST table name CDATA #REQUIRED>
+        <!ELEMENT columns (column+)>
+        <!ELEMENT column (#PCDATA)>
+        <!ATTLIST column type CDATA #REQUIRED>
+        <!ELEMENT constraints (constraint*)>
+        <!ELEMENT constraint (type, columnname, name)>
+        <!ELEMENT columnname (#PCDATA)>
+        <!ELEMENT type (#PCDATA)>
+        <!ELEMENT name (#PCDATA)>
